@@ -9,8 +9,16 @@ def is_fibonacci(n):
 
 
 if __name__ == '__main__':
-    n = int(input("Enter a number:  "))
-    if is_fibonacci(n):
-        print(f"{n} is a Fibonacci number.")
-    else:
-        print(f"{n} is not a Fibonacci number.")
+    while True:
+        try:
+            n = int(input("Enter a number:  "))
+
+            if is_fibonacci(n):
+                print(f"{n} is a Fibonacci number.")
+
+            else:
+                print(f"{n} is not a Fibonacci number.")
+
+        except ValueError:
+            print("You must only enter a number!")
+            break
